@@ -9,15 +9,22 @@ import java.util.Set;
 @Entity
 @Getter
 @Setter
+@Table(name = "Authors")
 public class Author {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String fullName;
+    @Column(name = "name", nullable = false)
+    private String name;
 
-    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<Book> books;
+    public Author(){
+        //default constructor
+    }
 
+    public Author(Long id, String name, Set<Book> books) {
+        this.id = id;
+        this.name = name;
+    }
 }

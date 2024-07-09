@@ -4,14 +4,20 @@ import com.example.library_demo.model.Author;
 import com.example.library_demo.repository.AuthorRepository;
 import com.example.library_demo.service.AuthorService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class AuthorServiceImpl implements AuthorService {
 
+    private final AuthorRepository authorRepository;
+
     @Autowired
-    private AuthorRepository authorRepository;
+    public AuthorServiceImpl(AuthorRepository authorRepository){
+        this.authorRepository = authorRepository;
+    }
 
     @Override
     public List<Author> getAllAuthors() {

@@ -1,6 +1,7 @@
 package com.example.library_demo.service;
 
 import com.example.library_demo.model.Book;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
