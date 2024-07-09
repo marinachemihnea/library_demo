@@ -12,7 +12,7 @@ public class Book {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     @Column(name = "title", nullable = false)
     private String title;
@@ -27,7 +27,8 @@ public class Book {
         //default constructor
     }
 
-    public Book(String title, String genre, Long authorId){
+    public Book(Long id, String title, String genre, Long authorId){
+        this.id = id;
         this.title = title;
         this.genre = genre;
         this.authorId = authorId;

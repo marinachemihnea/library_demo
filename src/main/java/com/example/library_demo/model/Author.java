@@ -23,7 +23,7 @@ public class Author {
         //default constructor
     }
 
-    public Author(Long id, String name, Set<Book> books) {
+    public Author(Long id, String name) {
         this.id = id;
         this.name = name;
     }
