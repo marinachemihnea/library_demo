@@ -9,3 +9,8 @@ Setup:
 
 
 There are no custom exceptions yet.
+
+Usage:
+
+1. Go to http://localhost:8080/swagger-ui/index.html to access SwaggerUI
+2. Try out the various methods
